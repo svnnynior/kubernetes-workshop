@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: single-api-deployment
+  labels:
+    app: single-api
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: single-api
+  template:
+    metadata:
+      labels:
+        app: single-api
+    spec:
+      containers:
+        - name: single-api
+          image: svnnynior/kubernetes-workshop:single-api
+          ports:
+            - containerPort: 3000
