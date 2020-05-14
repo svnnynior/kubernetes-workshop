@@ -1,4 +1,4 @@
-from node:10
+FROM node:10
 
 WORKDIR /usr/src/single-api-example
 
